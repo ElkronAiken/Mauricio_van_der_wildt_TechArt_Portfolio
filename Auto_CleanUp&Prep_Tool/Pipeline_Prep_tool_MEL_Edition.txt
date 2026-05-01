@@ -1,0 +1,34 @@
+// Pipeline Prep Tool - Versión MEL
+// Propósito: Limpieza de mallas para exportación
+
+global proc prepSceneForExport() {
+    // 1. Obtener la selección de objetos tipo transform que tengan meshes
+    string $selection[] = `ls -selection -dag -type "mesh"`;
+    
+    if (size($selection) == 0) {
+        warning "No hay meshes seleccionados para procesar.";
+        return;
+    }
+
+    // El comando ls -dag -type mesh nos devuelve el shape, 
+    // necesitamos subir al transform para aplicar transformaciones.
+    string $transforms[] = `listRelatives -parent $selection`;
+
+    for ($obj in $transforms) {
+        // 2. Freeze Transformations (Translación, Rotación, Escala)
+        makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 $obj;
+        
+        // 3. Delete History
+        delete -ch $obj;
+        
+        // 4. Center Pivot
+        xform -cp $obj;
+        
+        print ("Procesado: " + $obj + "\n");
+    }
+
+    print "Limpieza de pipeline (MEL) completada con éxito.\n";
+}
+
+// Ejecutar la función
+prepSceneForExport();
