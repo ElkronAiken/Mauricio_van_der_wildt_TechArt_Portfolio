@@ -35,4 +35,4 @@ Al ejecutar la herramienta, podrás verificar los cambios en la interfaz de Maya
 4. Selecciona tus objetos en el viewport y presiona `Ctrl + Enter`.
 
 ---
-*Desarrollado para la certificación de TechArt - 2026.*
+*Desarrollado para la Formación de TechArt en Max Sarlija Academy - Mayo 2026.*
