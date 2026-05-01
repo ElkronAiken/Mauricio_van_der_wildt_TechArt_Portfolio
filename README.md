@@ -1,7 +1,5 @@
 # 🛠️ Pipeline Prep Tool - Autodesk Maya
 
-![Banner del Proyecto](C:\Users\ariel\Documents\GitHub\Mauricio_van_der_wildt_TechArt_Portfolio\Auto_CleanUp&Prep_Tool)
-
 Este repositorio contiene una herramienta de automatización diseñada para optimizar y estandarizar el flujo de trabajo en **Autodesk Maya**, enfocada en la preparación de assets antes de su exportación a motores de juego o entornos de renderizado.
 
 ## 🎯 Propósito
